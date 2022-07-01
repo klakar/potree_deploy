@@ -6,6 +6,7 @@ cd potree_pkg
 # Clone and build the Potree viewer dependencys
 git clone https://github.com/potree/potree.git
 cd potree
+echo Installing Node.JS requires sudo priveleges
 sudo apt -yy install npm
 npm install
 cd ..
