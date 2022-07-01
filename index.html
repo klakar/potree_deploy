@@ -7,15 +7,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<title>Potree Viewer</title>
 
-	<link rel="stylesheet" type="text/css" href="../../build/potree/potree.css">
-	<link rel="stylesheet" type="text/css" href="../../libs/jquery-ui/jquery-ui.min.css">
-	<link rel="stylesheet" type="text/css" href="../../libs/openlayers3/ol.css">
-	<link rel="stylesheet" type="text/css" href="../../libs/spectrum/spectrum.css">
-	<link rel="stylesheet" type="text/css" href="../../libs/jstree/themes/mixed/style.css">
+	<link rel="stylesheet" type="text/css" href="../build/potree/potree.css">
+	<link rel="stylesheet" type="text/css" href="../libs/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../libs/openlayers3/ol.css">
+	<link rel="stylesheet" type="text/css" href="../libs/spectrum/spectrum.css">
+	<link rel="stylesheet" type="text/css" href="../libs/jstree/themes/mixed/style.css">
 	
 	<!--Stilinställningar för tillägg till sidan-->
 	<style>
-		#fm_logo_br {
+		#logo_br {
 			max-height: 120px;
 			position: absolute;
 			right: 15px;
@@ -27,31 +27,31 @@
 </head>
 
 <body>
-	<script src="../../libs/jquery/jquery-3.1.1.min.js"></script>
-	<script src="../../libs/spectrum/spectrum.js"></script>
-	<script src="../../libs/jquery-ui/jquery-ui.min.js"></script>
-	<script src="../../libs/other/BinaryHeap.js"></script>
-	<script src="../../libs/tween/tween.min.js"></script>
-	<script src="../../libs/d3/d3.js"></script>
-	<script src="../../libs/proj4/proj4.js"></script>
-	<script src="../../libs/openlayers3/ol.js"></script>
-	<script src="../../libs/i18next/i18next.js"></script>
-	<script src="../../libs/jstree/jstree.js"></script>
-	<script src="../../build/potree/potree.js"></script>
-	<script src="../../libs/plasio/js/laslaz.js"></script>
+	<script src="../libs/jquery/jquery-3.1.1.min.js"></script>
+	<script src="../libs/spectrum/spectrum.js"></script>
+	<script src="../libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../libs/other/BinaryHeap.js"></script>
+	<script src="../libs/tween/tween.min.js"></script>
+	<script src="../libs/d3/d3.js"></script>
+	<script src="../libs/proj4/proj4.js"></script>
+	<script src="../libs/openlayers3/ol.js"></script>
+	<script src="../libs/i18next/i18next.js"></script>
+	<script src="../libs/jstree/jstree.js"></script>
+	<script src="../build/potree/potree.js"></script>
+	<script src="../libs/plasio/js/laslaz.js"></script>
 
 	<!-- INCLUDE ADDITIONAL DEPENDENCIES HERE -->
 	<!-- INCLUDE SETTINGS HERE -->
 
 	
 	<div class="potree_container" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; ">
-		<div id="potree_render_area" style="background-image: url('../../build/potree/resources/images/background.jpg');"></div>
+		<div id="potree_render_area" style="background-image: url('../build/potree/resources/images/background.jpg');"></div>
 		<div id="potree_sidebar_container"> </div>
 	</div>
 	
 	<script type="module">
 
-	import * as THREE from "../../libs/three.js/build/three.module.js";
+	import * as THREE from "../libs/three.js/build/three.module.js";
 		window.viewer = new Potree.Viewer(document.getElementById("potree_render_area"));
 
 		viewer.setEDLEnabled(true);
@@ -59,7 +59,7 @@
 		viewer.setPointBudget(2_000_000);
 		viewer.loadSettingsFromURL();
 
-		viewer.setDescription("Försvarsmakten Göta Ingenjörregemente Geosupport");
+		viewer.setDescription("Potree Point Cloud Viewer");
 
 		viewer.loadGUI(() => {
 			viewer.setLanguage('en');
@@ -67,7 +67,7 @@
 		});
 
         var path = "./ept.json";
-		var name = "PunktMoln";
+		var name = "Point Cloud";
 
 		var getQueryParam = function(name) {
 			name = name.replace(/[\[\]]/g, "\\$&");
@@ -82,7 +82,7 @@
 			name = r;
             var http = 'http';
             if (r.substr(0, http.length) == http) path = name;
-            else path = "../../projekt/" + name + "/ept.json";
+            else path = "../" + name + "/ept.json";
         }
 
 		Potree.loadPointCloud(path, name, function(e){
@@ -96,8 +96,10 @@
 		});
 	</script>
 	
-	<!-- FM Logo, visas på plats som ställs in i CSS inställningarna i HEAD-taggen -->
-	<img id="fm_logo_br" src="../../img/FM_detalj_färg.png">
+	<!-- Floating logo -->
+	<!-- Change src url and remove brackets to use
+	<img id="logo_br" src="../logo.png">
+	-->
   </body>
 </html>
 
