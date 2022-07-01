@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mkdir potree_pkg
-cd potree_pkg
+mkdir build
+cd build
 
 # Clone and build the Potree viewer dependencys
 git clone https://github.com/potree/potree.git
@@ -24,4 +24,5 @@ cd deploy
 zip -rq ../../potree-deploy.zip *
 clear
 echo "file potree-deploy.zip has been created..."
-
+echo ""
+echo "You can delete the build folder if you no longer need it."
