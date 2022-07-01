@@ -1,13 +1,21 @@
-Viewer is designed to show Entwine Point Clouds
+Unzip content to folder where you want to "host" the viewer
+
+The viewer is designed to show Entwine Point Clouds
 
 Place ept.json and point cloud folders in the template folder.
-Or in copy of template folder under a new suitable name.
+--- Or ---
+Make a copy of template folder under a new suitable name and place your ept files/folders there.
 
 Start web server (python -m http.server 1234) in this root folder (where this file is located).
+--- Or ---
+If this folder is located on a web server just use that base url instead...
 
 Point a browser to http://localhost:1234/template (or the folder name with the desired ept.json file)
+(Alternativly use your webserver address with the subfolder added to the url)
 
-This package was cloned from source at https://github.com/potree/potree
+-------------------------------------------------------
+
+This package was cloned and built from source at https://github.com/potree/potree
 
 Use Untwine to generate Entwine pointcloud from LAS/LAZ source (included in QGIS installation).
 Use PDAL to convert between point cloud formats (also included in QGIS installation).
