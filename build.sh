@@ -22,5 +22,6 @@ wget -P deploy/ https://raw.githubusercontent.com/klakar/potree_deploy/main/read
 # Package deployment files to a zip-file
 cd deploy
 zip -rq ../../potree-deploy.zip *
+clear
 echo "file potree-deploy.zip has been created..."
 
