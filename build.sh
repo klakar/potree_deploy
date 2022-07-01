@@ -19,6 +19,7 @@ wget -P deploy/template/ https://raw.githubusercontent.com/klakar/potree_deploy/
 wget -P deploy/ https://raw.githubusercontent.com/klakar/potree_deploy/main/read.me
 
 # Package deployment files to a zip-file
-zip -rq potree-deploy.zip deploy
+cd deploy
+zip -rq ../../potree-deploy.zip *
 echo "file potree-deploy.zip has been created..."
 
