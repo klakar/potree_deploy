@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="../libs/spectrum/spectrum.css">
 	<link rel="stylesheet" type="text/css" href="../libs/jstree/themes/mixed/style.css">
 	
-	<!--Stilinställningar för tillägg till sidan-->
+	<!--Additional style settings for the viewer-->
 	<style>
 		#logo_br {
 			max-height: 120px;
@@ -94,10 +94,28 @@
 
 			viewer.fitToScreen(0.5);
 		});
+	
+		// Text with view presets. Copy any number of instances.
+		/* Edit the x,y,z for all positions and remove the comment to use labels with view presets
+		{
+			let aTrees = new Potree.Annotation({
+			position: [500000, 6300000, 500],
+				title: "Label text",
+				//description: `Uncomment to use this text as detailed description`,
+				cameraPosition: [500000, 6300000, 500],
+				cameraTarget: [500000, 6300000, 500],
+			});
+			aTrees.domElement.off("mouseenter");
+			aTrees.domElement.off("mouseleave");
+			viewer.scene.annotations.add(aTrees);
+		}
+		*/
+
+	
 	</script>
 	
 	<!-- Floating logo -->
-	<!-- Change src url and remove this comment to use
+	<!-- Change src url and remove this comment to use. CSS is styled in the top of page.
 	<img id="logo_br" src="../logo.png">
 	-->
   </body>
