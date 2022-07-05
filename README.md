@@ -25,3 +25,7 @@ Otherwise you can start a web server using a python command from the terminal (f
     python3 -m http.server 1234
 
 Then simply point your browser to http://localhost:1234/template or the subfolder where your point cloud is located.
+
+---
+
+More about this script: https://youtu.be/bMpFIBrO834
